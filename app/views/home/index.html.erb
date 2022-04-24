@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<% content_for :footer do %>
+	<head>
+		<style>
+        .col-centered {
+            float: none;
+            margin: 0 auto;
+        }
+        .button {;
+            color: #F0612F;
+            border: 3px solid #F0612F;
+            padding: 8px;
+            margin: 3px;
+            text-align: center;
+            text-decoration: none;
+            display: inline;
+						a:link,a:visited {
+								color: #F0612F;
+								background-color: transparent;
+								text-decoration: none;
+						}
+						a:hover {
+								color: #F0612F;
+								background-color: transparent;
+								text-decoration: underline;
+        }
+        /* Style the header */
+        .header {
+            padding: 40px;
+            margin: 0%
+        }
+        .paper{
+            border-left: 10px solid #F0612F;
+            background-color: Gainsboro;
+            padding: 5px 0px 5px 10px
+        }
+				.container {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+		</style>
+	</head>
+<% end %>
+<body>
+<div class="container" style="padding:20px 150px">
+		<ul class="header" style="text-align: right;">
+			<a class="button" href="#Introduction">Introduction</a>
+			<a class="button" href="#Age_Prediction">Age Prediction</a>
+			<a class="button" href="#About_us">About Us</a>
+			<a class="button" href="#Related_projects">Related Projects</a>
+			<a class="button" href="#Contact_us">Contact Us</a>
+		</ul>
+</div>
+<div class="container" style="padding: 0px 150px">
+	<h1 style="text-decoration-line: underline; text-decoration-color: #F0612F">Bone2Gene</h1>
+	<br>
+	<%= image_tag("bone2gene.png", :size=> "1024x332")%>
+	<br>
+</div>
+<br>
+<div class="container" style="padding: 0px 150px">
+	<h2 id="Introduction">Introduction</h2>
+	<p style="text-align: justify">
+		Although individually rare, skeletal dysplasias collectively constitute an important group of genetic disorders often
+				resulting in short stature, altered movement biomechanics, pain, fatigue, and reduced functional performance.
+				The clinical diagnosis of these disorders usually requires recognizing patterns on skeletal X-Ray images which is a
+				challenging task since most of these disorders are extremely rare, and even experienced clinicians might have seen
+				only some of these disorders. This is where AI and computer-vision can play an important role in providing assistive
+				tools for prompt detection and identification of these genetic disorders.
+	</p>
+	<p style="text-align: justify">
+				In this project, we are collecting hand X-Ray images of patients diagnosed with skeletal dysplasias and we are using
+				deep Convolutional Neural Networks (CNN) to build accurate AI models for the identification of phenotypic patterns
+				and classification of different rare skeletal diseases.
+	</p>
+	<p style="text-align: justify">
+				Our bone age DL model trained on the RSNA dataset reached a relatively good accuracy with
+				a mean age difference (MAD) of around 5 months. Using knowledge transfer from the bone age model,
+				we built a DL classifier fine-tuned on around 600 images of six skeletal disorders, namely Noonan,
+				Ullrich-Turner, SHOX-mutation, Silver–Russell, Hypochondroplasia, and Pseudohypoparathyroidism.
+				This preliminary classifier has a wide range of accuracy (e.g. 95% for SHOX-mutation compared to 0%
+				for Hypochondroplasia) which is mostly caused by our currently imbalanced dataset (242 SHOXmutation images compared
+				to only 25 for Hypochondroplasia).
+	</p>
+	<p style="text-align: center">
+	<br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/B_DJ-EEcN6c" title="YouTube video player"
+						frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+						picture-in-picture" allowfullscreen></iframe>
+		<br>
+		Dr. Behnam Javanmardi presented Bone2Gene in annual meeting of german human genetics in 2022 in Wuerzburg
+
+	</p>
+	</div>
+
+</div>
+<br>
+<div class="container" style="padding: 0px 150px">
+	<h2 id="Age_Prediction">Bone2gene: Age Prediction</h2>
+	<br>
+	<p class="text-center" style="font-size: smaller">
+		<%= image_tag("3858564.png", :size => "700x700") %>
+	</p>
+	<p class="text-center" style="font-size: 0.5px">
+		<a style="color: #bbbbbb; text-decoration: none;" href="https://www.flaticon.com/free-icons/commerce-and-shopping"
+			 title="commerce and shopping icons">Commerce and shopping icons created by Freepik - Flaticon</a>
+	</p>
+	<br>
+</div>
+<div class="container" style="padding: 0px 150px">
+	<h2 id="About_us">About Us</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<%= image_tag("Krawitz_Peter.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
+					<b><a href="https://www.igsb.uni-bonn.de/en/team-1/peter-krawitz" target="_blank">Prof. Dr. Peter Krawitz</a><br></b>
+					Association for Genome Diagnostics (AGD), Germany<br>
+					<b>Institute for Genomic Statistics and Bioinformatics</b>
+				</p>
+			</div>
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<br>
+					<br>
+					<%= image_tag("uni_logo.png", :size => "194x109")%>
+					<br>
+					<b>Universität Bonn</b>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<%= image_tag("avanmardi_Behnam.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
+					<b><a href="https://www.igsb.uni-bonn.de/en/team-1/behnam-javanmardi" target="_blank">Dr. Behnam Javanmardi</a><br></b>
+					IGSB, Universität Bonn<br>
+					<b>Scientific Researcher</b>
+				</p>
+			</div>
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<br>
+					<br>
+					<%= image_tag("logo-IGSB-quadratisch-mit-Schrift.jpg", :size => "99x100")%>
+					<br>
+					<br>
+					<b>Institute for Genomic Statistics and Bioinformatics</b>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<%= image_tag("Rassmann_Sebastian.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
+					<b><a href="https://www.igsb.uni-bonn.de/en/team-1/sebastian-rassmann" target="_blank">Sebastian Rassmann</a><br></b>
+					IGSB, Universität Bonn<br>
+					<b>Scientific Researcher</b>
+				</p>
+			</div>
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<br>
+					<br>
+					<%= image_tag("UKB_logo.png", :size => "200x44")%>
+					<br>
+					<br>
+					<b>Universität Bonn</b>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<%= image_tag("Alexander_Hustinx.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
+					<b><a href="https://www.igsb.uni-bonn.de/en/team-1/alexander-hustinx" target="_blank">Alexander Hustinx</a><br></b>
+					IGSB, Universität Bonn<br>
+					<b>Scientific Researcher</b>
+				</p>
+			</div>
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<br>
+					<br>
+					<%= image_tag("Otto_von_Guericke_Universität_Magdeburg_logo.svg", :size => "300x66")%>
+					<br>
+					<br>
+					<b>Universität Magdeburg</b>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<%= image_tag("Hsieh_Tzung-Chien.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
+					<b><a href="https://www.igsb.uni-bonn.de/en/team-1/tzung-chien-hsieh" target="_blank">Tzung-Chien Hsieh</a><br></b>
+					IGSB, Universität Bonn<br>
+					<b>Scientific Researcher</b>
+				</p>
+			</div>
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<br>
+					<%= image_tag("Universität_Leipzig_crest.svg", :size => "100x100") %><br>
+					<br>
+					<b>Universität Leipzig</b>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<%= image_tag("jingmei.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
+					<b><a href="https://www.igsb.uni-bonn.de/en/team-1/tzung-chien-hsieh" target="_blank">Dr. Jing-Mei Li</a><br></b>
+					IGSB, Universität Bonn<br>
+					<b>Software developer</b>
+				</p>
+			</div>
+			<div class="col-5 col-centered">
+				<p class="text-center">
+					<br>
+					<br>
+					<%= image_tag("logo_praxis_kinderzentrum.jpg", :size => "186x78") %><br>
+					<br>
+					<b>kinderzentrum am johannisplatz</b>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5 col-centered">
+				<p class="text-center">
+
+				</p>
+			</div>
+			<div class="col-5 col-centered">
+				<p class="text-center">
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" style="padding: 0px 150px">
+	<h2 id="Related_projects">Related Projects</h2>
+	<p class="paper">
+		<a href="https://db.gestaltmatcher.org/"><%= image_tag("gmdb_logo.jpg", :size => "50x50")%></a>
+		<a class="button" href="https://db.gestaltmatcher.org/"><b>GestaltMatcher DB</b></a><br>
+		<br>
+		GestaltMatcher paper:<br>
+		Hsieh, TC., Bar-Haim, A., Moosa, S. et al.<br>
+		<a href="https://doi.org/10.1038/s41588-021-01010-x" target="_blank">
+			<strong>GestaltMatcher facilitates rare disease matching using facial phenotype descriptors.</strong></a>
+		Nat Genet (2022).
+	</p>
+	<p class="paper">
+		<a href="https://db.gestaltmatcher.org/"><%= image_tag("gmdb_logo.jpg", :size => "50x50")%></a>
+		<a class="button" href="https://db.gestaltmatcher.org/"><b>DeepPrivacy</b></a><br>
+	</p>
+</div>
+<div class="container" style="padding: 0px 150px">
+	<h2 id="Contact_us">Contact Us</h2>
+	If you are interested in our project, please contact Prof. Peter Krawitz:
+	<a href="mailto:pkrawitz@uni-bonn.de"><b>pkrawitz@uni-bonn.de</b></a>
+	<br>
+</div>
+</body>
+</html>
