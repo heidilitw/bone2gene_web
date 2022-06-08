@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 	<style>
+		h1 {
+        text-decoration-line: underline;
+				text-decoration-color: #F0612F;
+		}
+		p {
+				font-size: 1.15rem;
+		}
 		#main-navbar {
 				display: flex;
 				justify-content: space-between;
@@ -84,7 +91,7 @@
 
 		}
 
-		#img img {
+		.img img{
 				display: block;
 				max-width: 90%;
 				max-height: 100%;
@@ -92,12 +99,23 @@
 				margin: 2rem auto;
 		}
 
-    #comming-soon img{
-        display: block;
+		#statistics {
+				list-style: none;
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+        max-width: 90%;
+		}
+
+    #statistics img {
+		    margin: 2rem 0;
+    }
+
+    #mat_v2 img {
+        max-width: 55%;
+    }
+
+    #DL img {
         max-width: 50%;
-        max-height: 100%;
-        object-fit: cover;
-        margin: 2rem auto;
     }
 
 		.col-centered {
@@ -133,7 +151,7 @@
 <body>
 	<main style="width: 90%; margin: 0 auto">
 		<div id="main-navbar" class="container">
-			<h1 style="text-decoration-line: underline; text-decoration-color: #F0612F">Bone2Gene</h1>
+			<h1>Bone2Gene</h1>
 			<ul id="header" style="text-align: right;">
 				<a class="button" href="#Introduction">Introduction</a>
 				<a class="button" href="#Age_Prediction">Age Prediction</a>
@@ -160,57 +178,76 @@
 				<a href="#Contact_us">Contact Us</a>
 			</ul>
 		</aside>
-		<div id="img">
-			<%= image_tag("bone2gene.png") %>
+		<div class="img">
+			<%= image_tag("b2g.jpg") %>
 		</div>
 		<br>
 		<div class="container" style="padding: 0 1rem">
 			<h2 id="Introduction">Introduction</h2>
 			<p style="text-align: justify">
-				Although individually rare, skeletal dysplasias collectively constitute an important group of genetic disorders often
-				resulting in short stature, altered movement biomechanics, pain, fatigue, and reduced functional performance.
-				The clinical diagnosis of these disorders usually requires recognizing patterns on skeletal X-Ray images which is a
-				challenging task since most of these disorders are extremely rare, and even experienced clinicians might have seen
-				only some of these disorders. This is where AI and computer-vision can play an important role in providing assistive
-				tools for prompt detection and identification of these genetic disorders.
+				Rare genetic diseases collectively affect more than 6% of the global population and skeletal disorders constitute
+				an important group of these diseases. They often result in short stature, altered movement biomechanics, pain,
+				fatigue, and reduced functional performance. They are individually very rare and are generally extremely
+				heterogeneous. Therefore, even experienced clinicians might have seen only some of these disorders which makes
+				their diagnosis a long and challenging process, sometimes referred to as the “diagnostic odyssey”.
 			</p>
 			<p style="text-align: justify">
-				In this project, we are collecting hand X-Ray images of patients diagnosed with skeletal dysplasias and we are using
-				deep Convolutional Neural Networks (CNN) to build accurate AI models for the identification of phenotypic patterns
-				and classification of different rare skeletal diseases.
+				With the rapid development of artificial intelligence (AI), various medical imaging modalities can be used for
+				developing next-generation phenotyping tools that are able to detect and recognize various and subtle
+				dysmorphisms and features caused by different genetic diseases. Bone2Gene utilizes such AI techniques with
+				the aim of shortening the “diagnostic odyssey”. We have so far collected 771 images of 189 patients with 7
+				different skeletal disorders plus 79 healthy controls. The current data are from different clinics in Magdeburg
+				and Leipzig in Germany.
 			</p>
+			<div  class="img">
+				<ul id="statistics">
+					<li><%= image_tag("patients_disorder_hist.jpg") %></li>
+					<li><%= image_tag("pie.jpg") %></li>
+				</ul>
+			</div>
 			<p style="text-align: justify">
-				Our bone age DL model trained on the RSNA dataset reached a relatively good accuracy with
-				a mean age difference (MAD) of around 5 months. Using knowledge transfer from the bone age model,
-				we built a DL classifier fine-tuned on around 600 images of six skeletal disorders, namely Noonan,
-				Ullrich-Turner, SHOX-mutation, Silver–Russell, Hypochondroplasia, and Pseudohypoparathyroidism.
-				This preliminary classifier has a wide range of accuracy (e.g. 95% for SHOX-mutation compared to 0%
-				for Hypochondroplasia) which is mostly caused by our currently imbalanced dataset (242 SHOXmutation images compared
-				to only 25 for Hypochondroplasia).
+				The current Bone2Gene classifier (so far trained on only 189 patients data) achieved an accuracy of 40% for 8
+				different classes (random probability is 1/8 or 12.5%). With increasing the data and also the number of disorders,
+				we envision Bone2Gene to become a supportive assistant to clinical geneticists. If you are interested in joining
+				our effort or you can provide us with rare skeletal disorders data, please use the info below this page to get in
+				touch with us.
 			</p>
+			<div id="mat_v2" class="img">
+				<%= image_tag("mat_v2.jpg") %>
+			</div>
 			<p style="text-align: center">
 				<br>
 				<iframe width="448" height="252"id="youtube" src="https://www.youtube.com/embed/B_DJ-EEcN6c" title="YouTube video player"
 								frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 						picture-in-picture" allowfullscreen></iframe>
 				<br>
-				Dr. Behnam Javanmardi presented Bone2Gene in annual meeting of german human genetics in 2022 in Wuerzburg
-
+				Dr. Behnam Javanmardi presented Bone2Gene in the annual meeting of the German Society of Human Genetics
+				2022 in Wuerzburg
 			</p>
 		</div>
 
-		</div>
 		<br>
 		<div class="container" style="padding: 0 1rem">
 			<h2 id="Age_Prediction">Bone2gene: Age Prediction</h2>
 			<br>
-			<p id="comming-soon" class="text-center" style="font-size: smaller">
-				<%= image_tag("3858564.png") %>
+			<div class="img">
+				<%= image_tag("boneage.jpg") %>
+			</div>
+			<p style="text-align: justify">
+				Growth disorder is one of the main symptoms of many skeletal diseases and radiologic bone age assessment is one
+				of the important tools for their diagnosis. Our Bone2Gene classifier is built upon a deep convolutional neural
+				network model that we trained on 12,000 X-rays from the Radiological Society of North America (RSNA).
+				Our bone age model achieved a state-of-the-art precision of mean absolute difference of 4.2 months with respect
+				to the average of seven human graders (on RSNA test date set), and only 7.5 months with respect to one human
+				grader on our skeletal disorder dataset (despite their dysmorphic features).
 			</p>
-			<p class="text-center" style="font-size: 0.5px">
-				<a style="color: #bbbbbb; text-decoration: none;" href="https://www.flaticon.com/free-icons/commerce-and-shopping"
-					 title="commerce and shopping icons">Commerce and shopping icons created by Freepik - Flaticon</a>
+			<div id="DL" class="img">
+				<%= image_tag("DL_vs_visual_Bone_Age.jpg") %>
+			</div>
+			<p>
+				We will soon deploy our bone age model as a web-based tool for clinical use.
 			</p>
+
 			<br>
 		</div>
 		<div class="container" style="padding: 0 1rem">
