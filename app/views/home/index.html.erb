@@ -138,10 +138,24 @@
 						background-color: #F0612F;
 						text-decoration: none;
 		}
-		.paper{
+		.paper {
 				border-left: 0.7rem solid #F0612F;
 				background-color: Gainsboro;
 				padding: 0.3rem 0 0.3rem 0.7rem
+		}
+
+		#logo_image {
+				list-style: none;
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 4rem;
+		}
+
+		#logo_image li {
+				margin-top: auto;
+				margin-bottom: auto;
+				margin-right: 1rem;
+
 		}
 
 
@@ -264,31 +278,10 @@
 					</div>
 					<div class="col-5 col-centered">
 						<p class="text-center">
-							<br>
-							<br>
-							<%= image_tag("uni_logo.png", :size => "194x109")%>
-							<br>
-							<b>Universität Bonn</b>
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-5 col-centered">
-						<p class="text-center">
 							<%= image_tag("avanmardi_Behnam.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
 							<b><a href="https://www.igsb.uni-bonn.de/en/team-1/behnam-javanmardi" target="_blank">Dr. Behnam Javanmardi</a><br></b>
 							IGSB, Universität Bonn<br>
-							<b>Scientific Researcher</b>
-						</p>
-					</div>
-					<div class="col-5 col-centered">
-						<p class="text-center">
-							<br>
-							<br>
-							<%= image_tag("logo-IGSB-quadratisch-mit-Schrift.jpg", :size => "99x100")%>
-							<br>
-							<br>
-							<b>Institute for Genomic Statistics and Bioinformatics</b>
+							<b>Principal Investigator</b>
 						</p>
 					</div>
 				</div>
@@ -303,32 +296,10 @@
 					</div>
 					<div class="col-5 col-centered">
 						<p class="text-center">
-							<br>
-							<br>
-							<%= image_tag("UKB_logo.png", :size => "200x44")%>
-							<br>
-							<br>
-							<b>Universität Bonn</b>
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-5 col-centered">
-						<p class="text-center">
 							<%= image_tag("Alexander_Hustinx.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
 							<b><a href="https://www.igsb.uni-bonn.de/en/team-1/alexander-hustinx" target="_blank">Alexander Hustinx</a><br></b>
 							IGSB, Universität Bonn<br>
 							<b>Scientific Researcher</b>
-						</p>
-					</div>
-					<div class="col-5 col-centered">
-						<p class="text-center">
-							<br>
-							<br>
-							<%= image_tag("Otto_von_Guericke_Universität_Magdeburg_logo.svg", :size => "300x66")%>
-							<br>
-							<br>
-							<b>Universität Magdeburg</b>
 						</p>
 					</div>
 				</div>
@@ -336,21 +307,11 @@
 					<div class="col-5 col-centered">
 						<p class="text-center">
 							<%= image_tag("Hsieh_Tzung-Chien.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
-							<b><a href="https://www.igsb.uni-bonn.de/en/team-1/tzung-chien-hsieh" target="_blank">Tzung-Chien Hsieh</a><br></b>
+							<b><a href="https://www.igsb.uni-bonn.de/en/team-1/tzung-chien-hsieh" target="_blank">Dr. Tzung-Chien Hsieh</a><br></b>
 							IGSB, Universität Bonn<br>
 							<b>Scientific Researcher</b>
 						</p>
 					</div>
-					<div class="col-5 col-centered">
-						<p class="text-center">
-							<br>
-							<%= image_tag("Universität_Leipzig_crest.svg", :size => "100x100") %><br>
-							<br>
-							<b>Universität Leipzig</b>
-						</p>
-					</div>
-				</div>
-				<div class="row">
 					<div class="col-5 col-centered">
 						<p class="text-center">
 							<%= image_tag("jingmei.jpg", :size => "150x150", :style => "border-radius: 50%;") %><br>
@@ -359,20 +320,32 @@
 							<b>Software developer</b>
 						</p>
 					</div>
+				</div>
+				<div class="row">
 					<div class="col-5 col-centered">
 						<p class="text-center">
-							<br>
-							<br>
-							<%= image_tag("logo_praxis_kinderzentrum.jpg", :size => "186x78") %><br>
-							<br>
-							<b>kinderzentrum am johannisplatz</b>
+							<%= image_tag("unknown.png", :size => "150x150", :style => "border-radius: 50%;") %><br>
+							<b><a href="https://www.ovgu.de/Mohnike-path-2,9459,14965,15788,15790.html" target="_blank">Prof. Dr. Klaus Mohnike</a><br></b>
+							Otto-von-Guericke-Universität Magdeburg<br>
+							<b>Medizinische Fakultät</b>
+						</p>
+					</div>
+					<div class="col-5 col-centered">
+						<p class="text-center">
+							<%= image_tag("unknown.png", :size => "150x150", :style => "border-radius: 50%;") %><br>
+							<b><a href="https://www.ovgu.de/Mohnike-path-2,9459,14965,15788,15790.html" target="_blank">Kyra Skaf</a><br></b>
+							Otto-von-Guericke-Universität Magdeburg<br>
+							<b>Medizinische Fakultät</b>
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-5 col-centered">
 						<p class="text-center">
-
+							<%= image_tag("unknown.png", :size => "150x150", :style => "border-radius: 50%;") %><br>
+							<b><a href="https://www.kinderaerzte-im-netz.de/aerzte/leipzig/a-keller/startseite.html" target="_blank">Dr. Alexandra Keller</a><br></b>
+							Kinderzentrum am Johannisplatz, Leipzig<br>
+							<b>Medizinische Fakultät</b>
 						</p>
 					</div>
 					<div class="col-5 col-centered">
@@ -399,12 +372,22 @@
 				<a class="button" href="https://deepprivacy.gestaltmatcher.org/"><b>DeepPrivacy</b></a><br>
 			</p>
 		</div>
+
 		<div class="container" style="padding: 0 auto">
 			<h2 id="Contact_us">Contact Us</h2>
-			If you are interested in our project, please contact Prof. Peter Krawitz:
-			<a href="mailto:pkrawitz@uni-bonn.de"><b>pkrawitz@uni-bonn.de</b></a>
-			<br>
+			<p>If you are interested in our project, please contact Prof. Peter Krawitz:
+				<a href="mailto:pkrawitz@uni-bonn.de"><b>pkrawitz@uni-bonn.de</b></a>,
+				or Dr. Behnam Javanmardi: <a href="mailto:bjav@uni-bonn.de"><b>bjav@uni-bonn.de</b></a></p>
 		</div>
+
+		<ul id="logo_image">
+			<li><%= image_tag("uni_logo.png", :size => "194x109")%></li>
+			<li><%= image_tag("logo-IGSB-quadratisch-mit-Schrift.jpg", :size => "99x100")%></li>
+			<li><%= image_tag("UKB_logo.png", :size => "200x44")%></li>
+			<li><%= image_tag("Otto_von_Guericke_Universität_Magdeburg_logo.svg", :size => "200x66")%></li>
+			<li><%= image_tag("Universität_Leipzig_crest.svg", :size => "100x100") %><br></li>
+			<li><%= image_tag("logo_praxis_kinderzentrum.jpg", :size => "186x78") %><br></li>
+		</ul>
 	</main>
 </body>
 </html>
